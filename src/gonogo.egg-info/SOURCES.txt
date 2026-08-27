@@ -1,0 +1,9 @@
+pyproject.toml
+src/gonogo/__init__.py
+src/gonogo/cli.py
+src/gonogo.egg-info/PKG-INFO
+src/gonogo.egg-info/SOURCES.txt
+src/gonogo.egg-info/dependency_links.txt
+src/gonogo.egg-info/entry_points.txt
+src/gonogo.egg-info/requires.txt
+src/gonogo.egg-info/top_level.txt

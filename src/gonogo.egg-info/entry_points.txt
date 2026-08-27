@@ -1,0 +1,2 @@
+[console_scripts]
+gonogo = gonogo.cli:app
