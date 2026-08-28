@@ -51,3 +51,6 @@ def read_file(file_path: Path) -> str:
         raise ValueError(
             f"Could not decode file as UTF-8: {file_path}"
         )
+def scan_file(file_path: Path) -> list[dict]:
+    content = read_file(file_path)
+    return detect_secrets(content)

@@ -7,3 +7,5 @@ src/gonogo.egg-info/dependency_links.txt
 src/gonogo.egg-info/entry_points.txt
 src/gonogo.egg-info/requires.txt
 src/gonogo.egg-info/top_level.txt
+src/gonogo/scanner/engine.py
+tests/test_engine.py

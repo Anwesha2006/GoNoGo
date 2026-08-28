@@ -1,1 +1,1 @@
-test file
+API_KEY="fake-secret-value-for-testing"
