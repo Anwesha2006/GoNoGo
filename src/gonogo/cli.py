@@ -1,6 +1,6 @@
 import typer
 from pathlib import Path
-from gonogo.scanner.engine import find_files, read_file
+from gonogo.scanner.engine import find_files, read_file, scan_file
 from gonogo.scanner.secrets import detect_secrets
 app = typer.Typer()
 @app.callback()
@@ -23,7 +23,7 @@ def scan(repository_path: str):
     findings = []
     for file in files:
       content = read_file(file)
-      findings.extend(detect_secrets(content,file))
+      findings.extend(scan_file(file))
     typer.echo(findings)
 if __name__ == "__main__":
     app()

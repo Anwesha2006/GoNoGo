@@ -1,1 +1,2 @@
-API_KEY="fake-secret-value-for-testing"
+
+# Set API_KEY = "your-api-key-here"

@@ -1,5 +1,7 @@
 from pathlib import Path
 import os
+from gonogo.scanner.secrets import detect_secrets
+from gonogo.scanner.permissions import detect_permissions
 IGNORE_DIRS = {
     ".git",
     ".venv",
@@ -51,6 +53,13 @@ def read_file(file_path: Path) -> str:
         raise ValueError(
             f"Could not decode file as UTF-8: {file_path}"
         )
-def scan_file(file_path: Path) -> list[dict]:
+def scan_file(file_path: Path) -> list:
     content = read_file(file_path)
-    return detect_secrets(content)
+    findings = []
+    findings.extend(
+        detect_secrets(content, file_path)
+    )
+    findings.extend(
+        detect_permissions(content, file_path)
+    )
+    return findings

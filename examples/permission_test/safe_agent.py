@@ -1,0 +1,5 @@
+agent = Agent(
+    tools=[
+        calculator
+    ]
+)
